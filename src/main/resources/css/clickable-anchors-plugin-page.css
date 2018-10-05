@@ -2,3 +2,14 @@
 
     color: dimgrey !important;
 }
+
+.wiki-content h1 > a.clickable-anchors-plugin-link,
+.wiki-content h2 > a.clickable-anchors-plugin-link,
+.wiki-content h3 > a.clickable-anchors-plugin-link,
+.wiki-content h4 > a.clickable-anchors-plugin-link,
+.wiki-content h5 > a.clickable-anchors-plugin-link,
+.wiki-content h6 > a.clickable-anchors-plugin-link
+{
+
+    color: inherit !important;
+}

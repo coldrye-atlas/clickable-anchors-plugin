@@ -18,6 +18,7 @@ AJS.$(document).ready(function () {
     var heading = $(elt);
     var anchor = $(document.createElement("a"));
     anchor.attr("href", "#" + elt.id);
+    anchor.addClass("clickable-anchors-plugin-link");
     heading.contents().appendTo(anchor);
     anchor.appendTo(heading);
   });
