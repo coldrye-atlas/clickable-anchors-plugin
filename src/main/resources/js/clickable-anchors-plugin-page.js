@@ -1,25 +1,24 @@
 AJS.$(document).ready(function () {
 
-  var anchors = AJS.$("#content span.confluence-anchor-link");
-  anchors.each(function (index, elt) {
+  var createAnchor = function (id) {
 
-    var span = $(elt);
-    var anchor = $(document.createElement("a"));
-    anchor.attr("href", "#" + elt.id);
-    anchor.attr("alt", elt.id);
-    anchor.text("#");
-    anchor.addClass("clickable-anchors-plugin-link");
-    anchor.appendTo(span);
+    return $(document.createElement("a"))
+      .attr("href", "#" + id)
+      .attr("alt", id)
+      .addClass("clickable-anchors-plugin-link");
+  };
+
+  AJS.$("#content span.confluence-anchor-link").each(function (_, elt) {
+
+    createAnchor(elt.id)
+      .text("#")
+      .appendTo(elt);
   });
 
-  var headings = AJS.$("#content :header[id]");
-  headings.each(function (index, elt) {
+  AJS.$("#content :header[id]").each(function (_, elt) {
 
-    var heading = $(elt);
-    var anchor = $(document.createElement("a"));
-    anchor.attr("href", "#" + elt.id);
-    anchor.addClass("clickable-anchors-plugin-link");
-    heading.contents().appendTo(anchor);
-    anchor.appendTo(heading);
+    createAnchor(elt.id)
+      .append($(elt).contents())
+      .appendTo(elt);
   });
 });

@@ -4,12 +4,12 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}"/>
-        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-icon">images/pluginLogo.png</param>
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
 
     <web-resource key="${atlassian.plugin.key}-resources" name="${atlassian.plugin.key} Common Web Resources">
-        <resource type="download" name="images/" location="/images"/>
+        <resource type="download" name="images/" location="/img"/>
         <context>${project.artifactId}</context>
     </web-resource>
 
@@ -24,8 +24,8 @@
 <!--
     <web-resource key="${atlassian.plugin.key}-editor-resources" name="${atlassian.plugin.key} Editor Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        <resource type="download" name="${project.artifactId}-editor.css" location="/css/editor.css"/>
-        <resource type="download" name="${project.artifactId}-editor.js" location="/js/editor.js"/>
+        <resource type="download" name="${project.artifactId}-editor.css" location="/css/${project.artifactId}-editor.css"/>
+        <resource type="download" name="${project.artifactId}-editor.js" location="/js/${project.artifactId}-editor.js"/>
         <context>editor</context>
     </web-resource>
 -->

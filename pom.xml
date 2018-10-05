@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>eu.coldrye.confluence.plugins</groupId>
     <artifactId>clickable-anchors-plugin</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2-FINAL</version>
 
     <organization>
         <name>coldrye</name>
@@ -15,7 +15,7 @@
     </organization>
 
     <name>clickable-anchors-plugin</name>
-    <description>This is the eu.coldrye.confluence.plugins:clickable-anchors-plugin plugin for Atlassian Confluence.</description>
+    <description>Clickable headings and anchors for Atlassian Confluence.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
