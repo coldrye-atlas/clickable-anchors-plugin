@@ -10,13 +10,13 @@
 
     <web-resource key="${atlassian.plugin.key}-resources" name="${atlassian.plugin.key} Common Web Resources">
         <resource type="download" name="images/" location="/images"/>
-        <context>better-list-labels-plugin</context>
+        <context>${project.artifactId}</context>
     </web-resource>
 
     <web-resource key="${atlassian.plugin.key}-page-resources" name="${atlassian.plugin.key} Page Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        <resource type="download" name="${project.artifactId}-page.css" location="/css/page.css"/>
-        <resource type="download" name="${project.artifactId}-page.js" location="/js/page.js"/>
+        <resource type="download" name="${project.artifactId}-page.css" location="/css/${project.artifactId}-page.css"/>
+        <resource type="download" name="${project.artifactId}-page.js" location="/js/${project.artifactId}-page.js"/>
         <context>preview</context>
         <context>page</context>
     </web-resource>
